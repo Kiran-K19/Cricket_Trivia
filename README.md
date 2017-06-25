@@ -1,3 +1,4 @@
+Checkout the application by visiting this URL:[Cricket Trivia](https://crick3t-trivia.herokuapp.com/).
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
