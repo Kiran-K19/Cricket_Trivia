@@ -1,9 +1,9 @@
 import {createStore} from 'redux';
-import {browserHistory} from 'react-router';
 import rootReducer from './reducers/index';
 
 
 const defaultState = {
+    submit:false,
     correct:0,
     incorrect:0,
     response:{}

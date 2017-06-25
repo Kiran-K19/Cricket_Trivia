@@ -7,15 +7,25 @@ class Questions extends React.Component{
 
 	render(){
   	return(
-    <form>
-      {questionnaire.questions.map( value => (
-      <div>
-        <p key={value.id}>{value.question}</p>
+    <form className="col-md-offset-1 col-md-5">
+      {
+        questionnaire.questions.map( value => {
+        if(questionnaire['questions'].length===Object.keys(this.props.response).length && this.props.submit){
+          var name='';
+          if(this.props.response[value.id])
+            name='has-success';
+          else
+            name='has-error';
+        }
+        return(
+        <div className={"form-group well "+name} key={value.id}>
+        <p className="control-label">{value.question}</p>
          <Answers options={value.answers} id={value.id} correctAnswer={value.correctAnswer} selectAnswer={this.props.selectAnswer}/> 
       </div>
-      ))}
-      <br/>
-      <Button/>
+      )})}
+      <div>
+      <Button resetAnswers={this.props.resetAnswers} submitAnswers={this.props.submitAnswers} response={this.props.response}/>
+      </div>
     </form>
     );
   }
