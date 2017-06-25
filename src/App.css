@@ -3,16 +3,42 @@
   text-align: center;
 }
 
-#y-axis {
-margin-left:12px;
-background-color: black;
-height: 240px;
-width: 3px;
+.text-primary {
+  font-size: 60px;
+  font-family: cursive;
+  font-weight: 500;
+
 }
 
-#x-axis {
-margin-left:12px;
-background-color: black;
-height: 3px;
-width: 240px;
+.graph-dimension {
+    border-style: solid;
+    width: 460px;
+    height: 424px;
+    border-width: 0px 0px 2px 2px;
+    padding: 0px;
+    top: 248px;
+}
+
+.bar{
+  width: 80px;
+  bottom: 0px;
+  /*border:0px solid black;*/
+  position: absolute;
+}
+
+.correct{  
+  left: 40px;
+  background-color: green;
+  -webkit-box-shadow:0 0 20px green; 
+  -moz-box-shadow: 0 0 20px green; 
+   box-shadow:0 0 20px green;
+}
+
+.incorrect{
+  left: 160px;
+  background-color: red;
+  -webkit-box-shadow:0 0 20px red; 
+  -moz-box-shadow: 0 0 20px red; 
+   box-shadow:0 0 20px red;
+  
 }

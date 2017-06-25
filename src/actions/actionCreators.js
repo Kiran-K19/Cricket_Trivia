@@ -17,6 +17,6 @@ export function submitAnswers() {
 
 export function resetAnswers() {
   return {
-    type: 'RESET_ANSWERS',
+    type: 'RESET_ANSWERS'
   }
 }

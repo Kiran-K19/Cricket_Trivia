@@ -7,6 +7,7 @@ import './App.css';
 
 function mapStateToProps(state){
 return{
+  submit:state.submit,
   correct: state.correct,
   incorrect: state.incorrect,
   response: state.response
@@ -16,10 +17,14 @@ return{
 class App extends React.Component{
 	render(){
   	return(
-    	<div>
-        <Questions selectAnswer={this.props.selectAnswer} response={this.props.response}/>
-        <br/>
-        <Graph graph={this.props.response}/>
+    	<div className="container-fluid">
+        <div className="row text-center row-buffer">
+          <h1 className="text-primary">CRICKET TRIVIA</h1>
+        </div>
+        <div className="row jumbotron">
+        <Questions submit={this.props.submit} selectAnswer={this.props.selectAnswer} response={this.props.response} resetAnswers={this.props.resetAnswers} submitAnswers={this.props.submitAnswers}/>
+        <Graph graph={this.props.response} correct={this.props.correct} incorrect={this.props.incorrect}/>
+        </div>
       </div>
     );
   }
